@@ -1,0 +1,32 @@
+CAPTAIN'S LOG --------------------------------------------------------------------------------
+																			   		Sort of...
+
+In case the dumb machine in your little skull cannot keep an idea for too long
+
+	* Battery should send initial state on startup
+	* Changable desktop background (with upload feature)
+	* Stop SMS reception event broadcasting and store in inbox manually
+	* Backup / Restore of SMS 
+	* Emotes in SMS conversations
+	
+Oh, and... Some stuff is acting weird. Check the following problems, would you?
+
+	* New message to custom number creates 2 conversations
+	
+	
+	
+Useful links
+
+http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously-with-jquery
+
+
+AWESOME! 
+
+Linux Firefox now support audio and video using HTML5!
+
+THANKS TO --
+
+	Spanish Translation
+		Irvin Hernandez
+		Katherine Biron
+		

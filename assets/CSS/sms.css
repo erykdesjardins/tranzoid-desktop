@@ -1,0 +1,575 @@
+#conversationsWrapper {
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+
+#conversationsList {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	
+	width:240px;
+	
+	margin:0;
+	padding:0;
+	
+	list-style-type: none;	
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	border-right: 3px solid [@theme.color1];
+	transition: box-shadow 0.5s;	
+}
+
+#currentConversation {
+	position:absolute;
+	top:80px;
+	bottom:0;
+	right:0;
+	left:250px;
+	
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+
+#currentMessagesList {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:100px;
+	
+	padding:0;
+	margin:0;
+	
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+#currentMessagesList li {
+	display:block;
+	height:auto;
+	padding:10px;
+	
+	font-family:Helvetica;
+	margin-bottom:10px;
+	padding-left:10px;
+	
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    border-radius: 15px;
+    
+    font-size:12px;	
+
+	position:relative;
+}
+
+#uploadSmsJson, #uploadSmsForm {
+	display:block;
+	
+	position:fixed;
+	top:-100px;
+	left:-100px;
+	
+	width:1px;
+	height:1px;
+}
+
+#currentMessagesList li.messageIn {
+	background-color: [@theme.messageIn];
+	
+	margin-left:10px;
+	margin-right:80px;
+}
+
+#currentMessagesList li.messageIn:hover {
+	box-shadow:0px 0px 3px 1px [@theme.messageIn];
+}
+
+#currentMessagesList li.messageOut {
+	background-color: [@theme.messageOut];
+	box-shadow:0px 0px 3px 1px [@theme.messageOut];
+	
+	margin-left:80px;
+	margin-right:10px;
+}
+
+#currentMessagesList li.messageOut:hover {
+	box-shadow:0px 0px 3px 1px [@theme.messageOut];
+}
+
+#currentMessagesList li h2 {
+	font-family: komika_textregular;	
+	font-size:20px;
+	font-weight:100;
+	
+	margin-bottom:-2px;
+	margin-left: 0px;
+	margin-top: -5px;
+}
+
+#conversationsMenu {
+	position: absolute;
+	top:10px;
+	right:20px;
+	
+	list-style-type: none;	
+	opacity:0.5;
+	
+	transition: opacity 0.6s;
+	z-index:500;
+}	
+
+#conversationsMenu:hover {
+	opacity:1;
+}
+
+#conversationsMenu li {
+	height:26px;
+	width:22px;
+	
+	border: 1px solid [@theme.color1];
+	background-color: [@theme.color2];
+	
+	transition: width 0.5s, color 0.5s;
+	float:left;
+	
+	white-space:nowrap;
+	font-family: action_manregular;
+	overflow:hidden;
+	
+	padding:0px;
+	padding-top: 6px;
+	padding-right:10px;
+	
+	cursor: pointer;
+}
+
+#conversationsMenu li:first-child {
+	border-top-left-radius:6px;
+	border-bottom-left-radius:6px;
+	-khtml-border-top-left-radius:6px;
+	-khtml-border-bottom-left-radius:6px;
+	-webkit-border-top-left-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-top-left-radius:6px;
+	-moz-border-bottom-left-radius:6px;
+}
+
+#conversationsMenu li:last-child {
+	border-top-right-radius:6px;
+	border-bottom-right-radius:6px; 
+	-khtml-border-top-right-radius:6px;
+	-khtml-border-bottom-right-radius:6px; 
+	-webkit-border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px; 
+	-moz-border-top-right-radius:6px;
+	-moz-border-bottom-right-radius:6px; 
+}
+
+#conversationsMenu span {
+	margin-left:10px;
+	
+	vertical-align:top;
+}
+
+#conversationsMenu li img {
+	margin:0;
+	
+	width:32px;
+	height:32px;
+	margin-top:-6px;
+}
+
+#conversationsMenu li:hover {
+	width: auto;
+	color: #FFF;
+}
+
+#btnAppendMoreSMS {
+	margin-right: 10px;
+	margin-left: 10px;
+	text-align: center;
+	
+	background-color: rgba(0,0,0,0.5);
+	
+	cursor:pointer;
+	transition: border 0.2s;
+}
+
+#btnAppendMoreSMS {
+	border:1px solid #FFF;
+}	
+
+.btnDeleteSMS {
+	position:absolute;
+	top:10px;
+	right:10px;
+	cursor:pointer;
+
+	display:none;
+}
+
+#currentMessagesList li:hover .btnDeleteSMS {
+	display:block;
+}
+
+#smsTextAreaWrapper {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:120px;
+}
+
+#smsTextArea {
+	width: 100%;
+	height: 72px;
+	margin-right: 4px;
+	margin-top: 4px; 
+	padding: 5px;
+	border: 0; 
+  
+	background-color: rgba(0, 0, 0, 0.5);
+	color:#FFF;
+	
+	border:2px solid [@theme.color2];	
+	font-family:Helvetica;
+	
+	resize: none;
+}
+
+#btnSendSMS {
+	position:absolute;
+	bottom:4px;
+	right:1px;
+	width:90px;
+	height:50px;
+	
+	color:#FFF;
+	text-shadow: 0px 0px 3px #000;
+	
+	text-align:center;
+	font-family: bebas_neueregular;	
+	padding-top:34px;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;	
+	
+	border:1px solid #AAA;		
+	
+	background: rgb(174,188,191);
+	background: -moz-linear-gradient(top, rgba(174,188,191,1) 0%, rgba(110,119,116,1) 51%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,188,191,1)), color-stop(51%,rgba(110,119,116,1)), color-stop(51%,rgba(10,14,10,1)), color-stop(100%,rgba(10,8,9,1)));
+	background: -webkit-linear-gradient(top, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 51%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: -o-linear-gradient(top, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 51%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: -ms-linear-gradient(top, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 51%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: linear-gradient(to bottom, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 51%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 );	
+	
+	cursor:pointer;
+	
+	transition: box-shadow 0.2s;
+}
+
+#btnSendSMS:hover {
+	box-shadow:0px 0px 30px 6px #FFF inset;
+}
+
+#conversationActions {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0px;	
+	height:90px;
+	
+	padding:0;
+	margin:0;	
+}
+
+#conversationsList li.conversationListItem {
+	width:200px;
+	height:20px;
+	padding:10px;
+	padding-bottom:20px;
+	margin:0px;
+	
+	color:#FFF;
+	text-decoration: none;	
+	font-family: bebas_neueregular;	
+	background:none;
+
+	cursor: pointer;
+	position:relative;
+	
+	transition: padding 0.2s, background 0.2s;
+}	
+
+#conversationsList li.conversationListItem:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#conversationsList li.conversationListItem .unreadTag {
+	position:absolute;
+	
+	top:10px;
+	left:10px;
+	
+	width:40px;
+	height:25px;
+	border:2px solid #ff7400;
+	background-color:#bf6900;
+	
+	color:#FFF;
+	font-weight: bold;
+	text-align:center;
+	
+	behavior:url(-ms-transform.htc); 
+    -moz-transform:rotate(-15deg);
+    -webkit-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    
+    font-size: 22px;
+    
+     -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    border-radius: 25px;    
+    
+    transition:left 0.2s;
+}
+
+#conversationsList li.conversationListItem.newSMSListItem span.name {
+	color:#DFD;
+	font-size:26px;
+	display:block;
+	
+	font-family:ciclesemi;
+}	
+
+#conversationsList li.conversationListItem:hover {
+	padding-left:15px;
+	background:#333;
+}
+
+#conversationsList li.conversationListItem:hover .unreadTag {
+	left:15px;
+}
+
+#conversationsList li.conversationListItem:hover .infoWrapper {
+	left:60px;
+}
+
+#conversationsList li.conversationListItem .infoWrapper {
+	position:absolute;
+	
+	top:8px;
+	right:0px;
+	left:50px;
+	
+	-webkit-transition: all 0.5s; 
+	   -moz-transition: all 0.5s; 
+		-ms-transition: all 0.5s;
+		 -o-transition: all 0.5s; 
+			transition: all 0.5s;
+}
+
+#conversationsList li.conversationListItem span.name {
+	font-family:Helvetica;
+	font-size:14px;
+	display:block;
+}
+
+#conversationsList li.conversationListItem span.number {
+	font-size:13px;
+	display:block;
+	font-family: ciclesemi;
+	
+	letter-spacing:1px;
+}
+
+#conversationsList li.conversationListItem img {
+	vertical-align:baseline;
+	width:30px;
+	
+	display:inline-block;
+	
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	-ms-border-radius:20px;
+	-o-border-radius:20px;
+	border-radius:20px;
+}
+
+#currentMessagesList li span.date {
+	font-size:12px;
+	color:#777;
+	display:block;
+	text-align:right;
+	margin-bottom:-5px;
+	margin-right: -2px;
+}
+
+#newSMSDialog {
+	display: none;
+	
+	position:absolute;
+	top:100px;
+	left:0;
+	right:0;
+	
+	width:400px;
+	height:300px;
+		
+	margin-left:auto;
+	margin-right:auto;
+	
+	padding:10px;
+		
+	background-color: rgba(0, 0, 0, 0.7);
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;	
+	
+	border:1px solid #777;
+	
+	box-shadow:0px 0px 30px 10px #000;
+}
+
+#newSMSDialog h3 {
+	font-family: action_manregular;	
+	font-size:22px;
+	display:block;
+	
+	text-shadow:0px 0px 3px #000;
+}
+
+#newSMSDialog .title {
+	display:block;
+	font-family: bebas_neueregular;	
+	font-size:18px;
+}
+
+#newSMSDialog input {
+	width:390px;
+}
+
+#newSMSDialog textarea {
+	width:390px;
+	height:150px;
+	
+	resize: no-resize;
+}
+
+#newSMSDialog #sendNewSMS {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;	
+	
+	border:1px solid #AAA;	
+
+	background: none;
+	cursor:pointer;
+	
+	text-align:center;
+	font-family: bebas_neueregular;	
+	
+	color:#FFF;
+	text-shadow:0px 0px 3px #FFF;
+	
+	margin-top:10px;
+	transition:background 0.2s, box-shadow 0.2s;
+}
+
+#newSMSDialog #sendNewSMS:hover {
+	background: #333;
+	box-shadow:0px 0px 3px 3px #FFF;
+}
+
+#newSMSDialog #closeNewSMS {
+	position:absolute;
+	
+	top:10px;
+	right:10px;
+	
+	width:24px;
+	height:24px;
+	
+	cursor:pointer;
+}
+
+.smsEmot {
+	height:20px;
+	width:20px;
+	
+	display: inline-block;
+	vertical-align: top;
+}
+
+.smsEmot.smile {
+	background-image : url(../emoticons/smile.png);
+}
+
+.smsEmot.sad {
+	background-image : url(../emoticons/sad.png);
+}
+
+.smsEmot.ermm {
+	background-image : url(../emoticons/ermm.png);
+}
+
+.smsEmot.pouty {
+	background-image : url(../emoticons/pouty.png);
+}
+
+.smsEmot.angry {
+	background-image : url(../emoticons/angry.png);
+}
+
+.smsEmot.grin {
+	background-image : url(../emoticons/grin.png);
+}
+
+.smsEmot.wink {
+	background-image : url(../emoticons/wink.png);
+}
+
+.smsEmot.tongue {
+	background-image : url(../emoticons/tongue.png);
+}
+
+.smsEmot.heart {
+	background-image : url(../emoticons/heart.png);
+}
+
+.smsEmot.happy {
+	background-image : url(../emoticons/happy.png);
+}
+
+.smsEmot.getlost {
+	background-image : url(../emoticons/getlost.png);
+}
+
+.smsEmot.pinch {
+	background-image : url(../emoticons/pinch.png);
+}
+
+.smsEmot.cwy {
+	background-image : url(../emoticons/cwy.png);
+}
+
+.smsEmot.shocked {
+	background-image : url(../emoticons/shocked.png);
+}

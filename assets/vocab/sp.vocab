@@ -1,0 +1,106 @@
+title|Tranzoid
+subtitle|Escritorio 
+rebooting|Reiniciando
+filemenu|Archivos
+browseautherror|Usted no está autorizado a ver el contenido de esta carpeta
+root|raíz
+says|dijo
+all|Todo
+others|Otros
+mediamenu|Multimedia
+mediasub|Los contenidos multimedia en su dispositivo
+musicartists|Artistas
+musicalbums|Álbumes
+musicsongs|Canciones
+musicfolders|Archivos
+nowplaying|En reproducción
+addtoplaylist|Añadir a la lista de reproducción
+emptyplaylist|Vacíe la lista
+gallerymenu|Fotos
+gallerysub|Las imágenes tomadas con la cámara
+audiomenu|Música
+audiosub|Pistas de música
+videomenu|Vídeos
+videosub|Clips de vídeo
+contactmenu|Contactos
+contactsub|Gestión de contactos
+smsmenu|Mensajes
+smssub|Sus conversaciones de mensajes de texto
+smssave|Enregistrer les conversations
+smsload|Cargar un archivo
+smsdelc|Eliminar esta conversación
+smssync|Sincronizar mensajes
+smssyncing|Sincronización en progreso
+smssyncdone|La sincronización se ha completado
+newsmssub|Nuevo mensaje
+newsmsbtn|Nuevo mensaje
+deletesmsconfirm|¿Quiere borrar este mensaje? Será imposible de recuperarlo.
+deleteconvconfirm|¿Quiere borrar este conversacione? Será imposible de recuperarlo.
+successsendsms|Mensaje enviado!
+phonenumber|Número de teléfono
+message|Mensaje
+send|Enviar
+devicemenu|Dispositivo
+devicesub|Las informaciónes sobre su teléfono o su tableta
+devicesmsday|Mensaje / Día
+devicesmscontact|Mensaje / Contacto
+deviceinfotitle|Información del dispositivo
+devicestorage|Uso de memoria
+devicesd1|Memoria del teléfono
+devicesd2|Memoria de la tarjeta SD
+devicegb|GB
+devicefreespace|Espacio libre
+settingsmenu|Configuración
+settingssub|Personalizar Escritorio Tranzoid
+loading|Cargando
+currentfolder|Sección actual
+ctxdownload|Descargar
+ctxview|Visualizar
+ctxplaymedia|Reproducir el contenido multimedia
+ctxplayvideo|Reproducir el video
+ctxcopy|Copiar
+ctxcut|Cortar
+ctxdelete|Eliminar
+ctxpaste|Pasta
+auth|Autenticación
+loginfailedmsg|Las informaciónes proporcionadas no son correctas. Por favor ingrese la contraseña correcta.
+loginfailedtitle|No se puede conectar
+loginsuccessmsg|Usted ha sido autenticado correctamente
+welcomeback|Bienvenido de nuevo!
+contactloadfail|No es posible acceder a los contactos del dispositivo
+me|Yo mismo
+clipboard|Portapapeles
+clipboardcopy|El archivo se encuentra ahora en el portapapeles
+clipboardmove|El archivo se ha movido
+clipboardpaste|El archivo se ha copiado
+clipboardfail|No se puede realizar la operación
+filedeleted|El archivo ha sido borrado del dispositivo
+deleteconfirm|¿Realmente desea eliminar este archivo? Será imposible de recuperarlo.
+battery|Batería
+batterycharged|La batería del dispositivo está llena.
+connectionlost|La conexión se ha perdido
+crashtitle|Se ha producido un error y la conexión con el dispositivo que se ha perdido
+crashretry|Recuperacion de la conexión en curso...
+notesmenu|Documentos
+notessub|Sus documentos Tranzoid
+notesnew|Nuevo documento
+notestitleinput|Por favor escriba el nombre del documento
+notessavesuccess|El documento se guardó
+notessavefail|No se puede guardar el documento
+save|Guardar
+theme|tema
+settingtitlecolor|Apariencia
+settingtitledim|Dimensiones & Posiciónes
+settingtitlesound|Sonido
+settingtitlelang|Idioma
+settingtitlesys|Sistema
+settingringtone|notificaciones audibles
+settinginterfacesnd|Sonidos de interfaz
+settingaddsnd|Sonido de un mensage enviado.
+settingpopupsnd|Sonido informativo
+settinglangnotice|Tenga en cuenta que al cambio de idioma necesitara un reinicio de Tranzoid.
+settingthemenotice|Tenga en cuenta que al cambio de tema necesitara un reinicio de Tranzoid.
+settinginsmscolor|El color de fondo de los mensajes entrantes
+settingoutsmscolor|El color de fondo de los mensajes salientes
+settingcolordlg|Elija un color y pulse el botón de la paleta
+settingphonenotif|Notificaciones del dispositivo

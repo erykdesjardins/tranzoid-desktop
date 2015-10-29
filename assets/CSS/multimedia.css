@@ -1,0 +1,622 @@
+#mediaSideMainMenu {
+	position:absolute;
+	top:120px;
+	left:30px;
+	bottom:30px;
+	width:180px;
+	
+	padding:0px;
+	border: 3px solid [@theme.color1];
+	
+	overflow:hidden;	
+}
+
+.mediaMainMenuBtn {
+	border-bottom: 3px solid [@theme.color1];
+	
+	margin:0px;
+	padding:0px;
+	position:relative;
+	
+	width:180px;
+	height:33%;
+	
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.mediaMainMenuBtn span {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	
+	font-family: action_manregular;
+	font-size: 18px;
+	
+	transition: all 0.3s;
+	text-shadow:0px 0px 5px #000;
+}
+
+.mediaMainMenuBtn:hover span, .mediaMainMenuBtn.selected span {
+	transform: translateX(-20px) rotateZ(-20deg);
+	-webkit-transform: translateX(-20px) rotateZ(-20deg);
+	-moz-transform: translateX(-20px) rotateZ(-20deg);
+	-ms-transform: translateX(-20px) rotateZ(-20deg);
+	-o-transform: translateX(-20px) rotateZ(-20deg);
+	font-size:40px;
+	bottom:50%;
+	color:#FFF;
+}
+
+.mediaMainMenuBtn img {
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	
+	transition: all 0.3s;
+}
+
+.mediaMainMenuBtn:hover img, .mediaMainMenuBtn.selected img {
+	transform: scale(1.5) rotateZ(20deg);
+	-webkit-transform: scale(1.5) rotateZ(20deg);
+	-moz-transform: scale(1.5) rotateZ(20deg);
+	-ms-transform: scale(1.5) rotateZ(20deg);
+	-o-transform: scale(1.5) rotateZ(20deg);
+	
+	opacity:0.7;
+}
+
+.mediaMainMenuBtn:last-child {
+	border-bottom: none;
+	height:34%;
+}
+
+#galleryPhotosWrapper, #musicLibraryWrapper, #videoLibraryWrapper {
+	position: absolute;
+	top:120px;
+	left:230px;
+	right:30px;
+	bottom:30px;
+	
+	display:none;
+}	
+
+#musicLibraryWrapper {
+	border: 3px solid [@theme.color1];
+}
+
+#musicSectionHeaderWrapper {
+	margin:0;
+	padding:10px;
+	display:block;
+	
+	background-color: [@theme.color1];
+	z-index:10;
+	
+	position:relative;
+	
+	z-index: 10;
+}
+
+#musicTypeSelection {
+	z-index:5;
+	
+	position:absolute;
+	top:50px;
+	bottom:50px;
+	left:0;
+	
+	width:150px;
+	list-style-type: none;
+	
+	padding:0;
+	margin:0;
+	
+	overflow:hidden;
+	border:none;
+	border-right:1px solid [@theme.color1];
+}
+
+#musicTypeSelection li {
+	width:100%;
+	margin:0;
+	padding-left:12px;
+	padding-top:20px;
+	padding-bottom:20px;
+	
+	font-size:22px;
+	cursor:pointer;
+	
+	font-family: bebas_neueregular;
+	text-shadow:0px 1px 0px #000;
+	
+	transition:all 0.2s;
+}
+
+#musicTypeSelection li:hover, #musicTypeSelection li.selected {
+	padding-left:20px;
+	
+	background-color:#333;
+	color:#FFF;
+}
+
+.musicTableWrapper {
+	position:absolute;
+	
+	top:50px;
+	left:150px;
+	right:0;
+	bottom:50px;
+	
+	overflow-y:auto;
+	display:none;
+	
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mediaPlayingTimelineWrapper {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:15px;
+	border-top:1px solid [@theme.color2];
+	
+	cursor: crosshair;
+}
+
+
+.mediaPlayingTimeline {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	
+	background-color: [@theme.light2];
+}
+
+.mediaControlsContainer {
+	text-align:center;
+	height:35px;
+	
+	vertical-align:top;
+}
+
+.mediaControlsContainer img {
+	cursor:pointer;
+	vertical-align:top;
+	
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+	     -o-border-radius: 5px;
+			border-radius: 5px;	
+}
+
+.mediaControlsContainer .mediaControlVerticalSeparator {
+	height:35px;
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:15px;
+	margin-right:15px;
+	
+	width:1px;
+	background-color:[@theme.color2];
+	
+	display: inline-block;
+}
+
+#musicPlayingDockWrapper {
+	position:absolute;
+	
+	left:0px;
+	bottom:0px;
+	right:0;
+
+	height:50px;
+	
+	background-color: [@theme.color1];
+	border-top:2px solid [@theme.color2];
+}
+
+#musicAlbumsWrapper ul {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+
+#musicAlbumsWrapper ul li {
+	width:256px;
+	height:256px;
+	
+	overflow:hidden;
+	border:3px solid [@theme.color1];
+	box-shadow: 0px -50px 30px -20px #000 inset;
+	background-repeat:no-repeat;
+	background-position:center; 
+	background-size:cover;
+	
+	position:relative;
+	
+	margin:10px;
+	float:left;
+	
+	cursor:pointer;	
+	
+	transition:all 0.2s;
+}
+
+#musicAlbumsWrapper ul li:hover {
+	transform:rotateZ(5deg) scale(1.1);
+	-ms-transform:rotateZ(5deg) scale(1.1); 
+	-webkit-transform:rotateZ(5deg) scale(1.1);	
+	-moz-transform:rotateZ(5deg) scale(1.1);	
+	-o-transform:rotateZ(5deg) scale(1.1);		
+}
+
+#musicAlbumsWrapper ul li span {
+	position:absolute;
+	
+	bottom:10px;
+	right:10px;
+	
+	text-shadow: 0px 0px 5px #000;
+	color:#FFF;
+	
+	font-family: action_manregular;
+	font-size:18px;
+}
+
+.musicHeaderButton {
+	border: 2px solid [@theme.color2];
+	
+	position:absolute;
+	top:2px;
+	right:2px;
+	height:36px;
+	
+	padding-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;	
+	
+	vertical-align: middle;
+	
+	transition: all 0.2s;
+	cursor:pointer;
+	
+	display:none;
+}
+
+.musicHeaderButton:hover {
+	background-color:[@theme.color2];
+}
+
+.musicHeaderButton span {
+	vertical-align: middle;
+	font-family: bebas_neueregular;
+	font-size: 18px;
+}
+
+.musicHeaderButton img {
+	vertical-align: middle;
+}
+
+.mediaListBtn, .mediaPlayBtn, .mediaRemoveBtn {
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.musicTableWrapper table {
+	margin:0;
+	width:100%;
+	
+    border-spacing: 0px;
+    border-collapse: separate;	
+}
+
+.musicTableWrapper table thead {
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );	
+}	
+
+.musicTableWrapper table th {
+	padding:10px;
+	color:[@theme.color2];
+	text-shadow:0px 0px 5px #FFF;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.musicTableWrapper table tbody tr {
+	cursor:pointer;
+	padding:5px;	
+	font-family: Helvetica;
+	
+	transition:all 0.2s;
+}
+
+#musicPlaylistWrapper table tbody tr.nowPlaying td {
+	background-color: [@theme.color1];
+}
+
+.musicTableWrapper table tbody tr td {
+	padding: 5px;
+	transition:all 0.2s;
+}
+
+.musicTableWrapper table tbody tr td:first-child {
+	padding-left:10px;
+}
+
+.musicTableWrapper table tbody tr:hover td:first-child {
+	
+}
+
+.musicTableWrapper table tbody tr:hover td {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#musicSectionHeaderWrapper h3 {
+	margin:0;
+	font-size: 28px;
+	color:#FFF;
+	text-shadow:0px 1px 0px #000;
+	
+	white-space:nowrap;
+}	
+
+span.musicTime {
+	position:absolute;
+	top:-2px;
+	
+	font-size:30px;
+	font-family: action_manregular;
+	color:#FFF;
+	text-shadow:0px 0px 5px #000; 
+}
+
+span.currentMusicTime {
+	left:5px;
+}
+
+span.totalMusicTime {
+	right:5px;
+}
+
+.mediaList {
+	display:none;
+}
+
+#GalleryList {
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:-10px;
+	bottom:0px;
+	
+	perspective: 1000px;
+	
+	overflow-y: auto;
+}
+
+#GalleryList h3 {
+	font-family: action_manregular;	
+	clear:both;
+	display:block;
+	text-shadow:0px 0px 3px #FFF;
+	margin:0px;
+	font-size:38px;
+}
+
+.galleryThumbnail {
+	float:left;
+	
+	width:200px;
+	height:200px;
+	
+	margin:10px;
+	
+	border:3px solid [@theme.color1];
+	box-shadow: 0px -40px 30px -20px #000 inset;
+	
+	cursor: pointer;
+	
+	background-image: url(../mediaimg/rloading.gif);
+	background-repeat:no-repeat;	
+	background-position:center;
+	
+	position:relative;
+	
+	transition: transform 0.2s;
+	-ms-transition:-ms-transform 0.2s;
+	-webkit-transition:-webkit-transform 0.2s;
+	-moz-transition:-moz-transform 0.2s;
+	-o-transition:-o-transform 0.2s;	
+	
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;	
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;	
+}	
+
+.galleryThumbnail:hover {
+	transform:rotateZ(5deg) scale(1.1);
+	-ms-transform:rotateZ(5deg) scale(1.1); 
+	-webkit-transform:rotateZ(5deg) scale(1.1);	
+	-moz-transform:rotateZ(5deg) scale(1.1);	
+	-o-transform:rotateZ(5deg) scale(1.1);	
+}
+
+#galleryBtnMore {
+	background-image: url(../mediaimg/bigplus.png);
+	background-color: rgba(0, 0, 0, 0.5);
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	cursor: pointer;
+	
+	float:left;
+	width:200px;
+	height:200px;
+	
+	margin:10px;
+	
+	border:3px solid [@theme.color2];
+	transition: border 0.2s;
+}
+
+#galleryBtnMore:hover {
+	border:3px solid [@theme.color1];
+}
+
+.galleryDate {
+	font-family: action_manregular;	
+	font-size:18px;
+
+	position:absolute;	
+	bottom:8px;
+	right:8px;
+	
+	color:#FFF;
+	text-shadow:0px 0px 3px #000;
+}	
+
+
+#galleryViewerWrapper {
+	position:fixed;
+	top:50px;
+	bottom:90px;
+	left:50px;
+	right:50px;
+	
+	z-index:250;
+
+	display:none;
+	
+	border:3px solid [@theme.color1];
+     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;	
+}
+
+#galleryViewer {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	
+	z-index:250;
+	
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;	
+
+	background-repeat:no-repeat;
+	background-position:center; 
+	background-size: contain;	
+}
+
+#galleryViewerLoading {
+	display:block;
+	text-align:center;
+	width:100%;
+	position:absolute;
+	
+	top:100px;
+	left:0;
+	right:0;
+	z-index:20;
+	
+	font-family: bebas_neueregular;	
+	font-size:60px;	
+}
+
+#galleryViewerTitle {
+	position:absolute;
+	bottom:20px;
+	left:20px;
+	
+	font-family: bebas_neueregular;	
+	font-size:36px;
+	text-shadow:0px 0px 3px #000;
+	color:#FFF;
+	z-index:310;
+}
+
+#galleryViewerWrapper .photoViewerCloseBtn {
+	position:absolute;
+	top:10px;
+	right:10px;
+	
+	height:24px;
+	width:24px;
+	z-index:310;
+	
+	cursor: pointer;
+}
+
+#galleryViewerWrapper .photoViewerRotateBtn {
+	position:absolute;
+	top:10px;
+	right:40px;
+	
+	height:24px;
+	width:24px;
+	z-index:310;
+	
+	cursor: pointer;
+}
+
+#galleryViewerWrapper .photoViewerDerotateBtn {
+	position:absolute;
+	top:10px;
+	right:70px;
+	
+	height:24px;
+	width:24px;
+	z-index:310;
+	
+	cursor: pointer;
+}
+
+#mediaWaveContainer {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	
+	z-index:-10;
+}
+
+.mediaWave {
+	width:1.00%;
+	height:0%;
+	position:absolute;
+	bottom:0;
+	
+	background-color:[@theme.color2];
+	
+	-webkit-transition: height 0.1s;
+	-moz-transition: height 0.1s;
+	-ms-transition: height 0.1s;
+	-o-transition: height 0.1s;
+	transition: height 0.1s;
+}

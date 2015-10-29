@@ -1,0 +1,119 @@
+title|Tranzoid
+subtitle|Desktop
+rebooting|Rebooting
+filemenu|Files
+browseautherror|You are not authorized to view the content of this directory
+root|root
+says|says
+all|All
+others|Others
+mediamenu|Multimedia
+mediasub|Multimedia content on your device
+musicartists|Artists
+musicalbums|Albums
+musicsongs|Songs
+musicfolders|Folders
+nowplaying|Now playing
+addtoplaylist|Add to current playlist
+emptyplaylist|Empty playlist
+gallerymenu|Gallery
+gallerysub|Pictures taken with your camera
+audiomenu|Music
+audiosub|Audio tracks from various artists
+videomenu|Videos
+videosub|Video clips
+contactmenu|Contacts
+contactsub|Manage existing contacts
+smsmenu|Messages
+smssub|Your text conversations
+smssave|Save all conversations
+smsload|Load history file
+smsdelc|Delete this conversation
+smssync|Force syncronization
+smssyncing|Syncronization in progress
+smssyncdone|Successfuly syncronized messages
+newsmssub|New Text Message
+newsmsbtn|New Message
+deletesmsconfirm|Would you like to delete this text message? This cannot be undone.
+deleteconvconfirm|Would you like to delete this text conversation? This cannot be undone.
+successsendsms|Message sent!
+phonenumber|Phone number
+message|Message
+send|Send
+devicemenu|Device
+devicesub|Information about your cellphone or tablet
+devicesmsday|Message / Day
+devicesmscontact|Message / Contact
+deviceinfotitle|Device information
+devicestorage|Memory usage
+devicesd1|Phone Memory
+devicesd2|SD Card Memory
+devicegb|GB
+devicefreespace|Free space
+settingsmenu|Settings
+settingssub|Customize Tranzoid Desktop
+loading|Loading
+currentfolder|Current Folder
+ctxdownload|Download
+ctxview|View
+ctxplaymedia|Play Media
+ctxplayvideo|Play Video
+ctxcopy|Copy
+ctxcut|Cut
+ctxdelete|Delete
+ctxpaste|Paste
+auth|Authentication
+loginfailedmsg|The credentials you provided are not valid. Please enter the correct password.
+loginfailedtitle|Unable to login
+loginsuccessmsg|You\'ve been successfully logged in
+welcomeback|Welcome back!
+contactloadfail|Unable to get all contacts from device.
+me|Me
+clipboard|Clipboard
+clipboardcopy|File was pinned onto clipboard
+clipboardmove|File was successfully moved
+clipboardpaste|File was successfully copied
+clipboardfail|Could not proceed with current operation
+filedeleted|File was deleted from device
+deleteconfirm|Would you like to delete this file? This cannot be undone.
+battery|Battery
+batterycharged|The device\'s battery is fully charged
+connectionlost|Connection was lost
+crashtitle|An error occured and connection with device was lost
+crashretry|Attempting to recover connection...
+notesmenu|Documents
+notessub|Your Tranzoid documents
+notesnew|New document
+notestitleinput|Please provide a document name
+notessavesuccess|Document saved successfully
+notessavefail|Could not save document
+save|Save
+theme|Theme
+settingtitlecolor|Appearance
+settingtitledim|Dimensions & Positions
+settingtitlesound|Audio
+settingtitlelang|Language
+settingtitlesys|System
+settingringtone|Notification sounds
+settinginterfacesnd|Interface sounds
+settingaddsnd|Outgoing message sound
+settingpopupsnd|Notice sounds
+settinglangnotice|Please note that changing between languages requires Tranzoid to restart
+settingthemenotice|Please note that changing between themes requires Tranzoid to restart
+settinginsmscolor|Incoming SMS background color
+settingoutsmscolor|Outgoing SMS background color
+settingcolordlg|Choose a color then press the palette button
+settingphonenotif|Cellphone notifications
+ctnidentity|Identity
+ctnfullname|Full name
+ctnnumber|Phone number
+ctnmobile|Mobile
+ctnhome|Home
+ctnwork|Work
+ctnemail|Email
+ctnlocation|Location
+ctnaddress|Address
+ctncountry|Country
+ctncity|City
+ctnregion|State/Province
+ctnpostal|ZIP Code

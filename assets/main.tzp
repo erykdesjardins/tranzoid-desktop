@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>[#title] - [#subtitle]</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="[#title]">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		
+		<link rel="icon" type="image/png" href="mediaimg/tzicon36.png">
+		
+		<script type="text/javascript" src="JS/jquery.js" ></script>
+		<script type="text/javascript" src="JS/jui.js" ></script>
+		<script type="text/javascript" src="JS/jqueryform.js" ></script>
+		<script type="text/javascript" src="JS/modernizr.js" ></script>
+		<script type="text/javascript" src="JS/notify.js"></script>
+		<script type="text/javascript" src="JS/cookies.js"></script>
+		
+		<script type="text/javascript" src="JS/main.js"></script>
+		<script type="text/javascript" src="JS/graphics.js"></script>
+		<script type="text/javascript" src="JS/security.js"></script>
+		<script type="text/javascript" src="JS/uploader.js"></script>
+		<script type="text/javascript" src="JS/filebrowser.js"></script>
+		<script type="text/javascript" src="JS/livenotif.js"></script>
+		<script type="text/javascript" src="JS/contacts.js"></script>
+		<script type="text/javascript" src="JS/sms.js"></script>
+		<script type="text/javascript" src="JS/audioctx.js"></script>
+		<script type="text/javascript" src="JS/multimedia.js"></script>
+		<script type="text/javascript" src="JS/settings.js"></script>
+		<script type="text/javascript" src="JS/notes.js"></script>
+		<script type="text/javascript" src="JS/device.js"></script>
+		
+		<script type="text/javascript" src="JScolor/colorpicker.js"></script>
+	    <script type="text/javascript" src="JScolor/eye.js"></script>
+	    <script type="text/javascript" src="JScolor/utils.js"></script>
+		
+	    <!--[if lt IE 9]><script type="text/javascript" src="JQplot/excanvas.min.js"></script><![endif]-->
+	    <script type="text/javascript" src="JQplot/jquery.jqplot.min.js"></script>
+	    <script type="text/javascript" src="JQplot/jqplot.plugs.min.js"></script>
+		
+		<script type="text/javascript" src="JStexteditor/jquery.sceditor.bbcode.min.js"></script>
+		
+		<link href="fonts/bebas/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="fonts/marker/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="fonts/actionman/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="fonts/Cicle/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="fonts/komika/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="fonts/leckerlione/stylesheet.css" rel="stylesheet" type="text/css" />
+		
+		<link href="CSS/jui.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/notify.css" rel="stylesheet" type="text/css" />
+		
+		<link href="CSS/main.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/login.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/filebrowser.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/uploader.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/livenotif.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/contacts.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/sms.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/multimedia.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/settings.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/themes.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/notes.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/device.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/loading.css" rel="stylesheet" type="text/css" />
+		
+		<link href="CSS/colorpicker.css" rel="stylesheet" type="text/css" />
+		
+		<link href="JQplot/jquery.jqplot.min.css" rel="stylesheet" type="text/css" />
+		
+		<link rel="stylesheet" href="JStexteditor/themes/default.min.css" type="text/css" media="all" />
+	</head>
+	
+	<body>
+		
+		<div id="mainPageWrapper" class="mainPageWrapper">
+			<div id="mainPageContainer" class="mainPageContainer perspective3000">
+				<div class="blackHover slidedClosed" style="display:none;" id="blackHover">
+					<div class="templateWrapper" style="display:none;" id="fileBrowserWrapper">
+						<h2>[#filemenu]</h2>
+						<h3 id="fileBrowserCurrentFolder">[#currentfolder]</h3>
+						<div id="fileListingWrapper" class="perspective3000" >
+							<ul class="fileListing">
+								
+							</ul>
+						</div>
+						
+						<div id="photoViewerWrapper" class="TH[@pref.theme]">
+							
+							<div id="photoViewer">
+								<span id="photoViewerLoading"></span>
+								<span id="photoViewerTitle"></span>
+							</div>		
+							
+							<img src="mediaimg/close.png" class="photoViewerCloseBtn" />
+							<img src="mediaimg/rotateright.png" class="photoViewerRotateBtn" />
+							<img src="mediaimg/rotateleft.png" class="photoViewerDerotateBtn" />
+						</div>
+						
+						<div id="browserPasteButton">
+							<img src="mediaimg/paste.png" />
+							
+							<b>[#ctxpaste]</b>
+							<br>
+							<span id="browserPasteFilename">
+								Filename
+							</span>
+						</div>				
+					</div>
+					
+					<div class="templateWrapper" style="display:none;" id="galleryWrapper">
+						<h2>[#mediamenu]</h2>
+						<h3>[#mediasub]</h3>
+						<div id="mediaSideMainMenu" class="TH[@pref.theme]">
+							<div class="mediaMainMenuBtn" id="galleryPhotosBtn"><img src="mediaimg/lphoto.png" /><span>Photos</span></div>
+							<div class="mediaMainMenuBtn" id="musicLibraryBtn"><img src="mediaimg/folder-music.png" /><span>Musique</span></div>
+							<div class="mediaMainMenuBtn" id="videoLibraryBtn"><img src="mediaimg/moviebig.png" /><span>Videos</span></div>
+						</div>
+						
+						<div id="galleryPhotosWrapper" class="mediaContentWrapper">
+							<div id="GalleryList">
+								<div id="galleryBtnMore"></div>
+							</div>
+						</div>
+						
+						<div id="musicLibraryWrapper" class="mediaContentWrapper">
+							<div id="musicSectionHeaderWrapper">
+								<h3>[#musicartists]</h3>
+								
+								<div id="addToPlaylistBtn" class="musicHeaderButton">
+									<img src="mediaimg/playlisticon.png" />
+									<span>[#addtoplaylist]</span>
+								</div>
+								
+								<div id="emptyPlaylistBtn" class="musicHeaderButton">
+									<img src="mediaimg/x32.png" />
+									<span>[#emptyplaylist]</span>
+								</div>								
+							</div>
+							
+							<ul id="musicTypeSelection" class="TH[@pref.theme]">
+								<li id="musicArtistType">[#musicartists]</li>
+								<li id="musicAlbumType">[#musicalbums]</li>
+								<li id="musicSongType">[#musicsongs]</li>
+								<li id="musicFolderType">[#musicfolders]</li>
+								<li id="musicNowPalyingType">[#nowplaying]</li>
+							</ul>
+							
+							<div id="musicArtistsWrapper" class="musicTableWrapper">
+								<table>	
+									<thead>
+										<tr>
+											<th>Artist</th>
+											<th>Albums</th>
+											<th>Songs</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>
+							
+							<div id="musicAlbumsWrapper" class="musicTableWrapper">
+								<ul>
+								
+								</ul>
+							</div>
+							
+							<div id="musicSongsWrapper" class="musicTableWrapper">
+								<table>	
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>#</th>
+											<th>Duration</th>
+											<th>Year</th>
+											<th>Filename</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>	
+							
+							<div id="musicPlaylistWrapper" class="musicTableWrapper">
+								<table>	
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>#</th>
+											<th>Duration</th>
+											<th>Filename</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								</table>								
+							</div>		
+							
+							<div id="musicPlayingDockWrapper">
+								<div class="mediaPlayingTimelineWrapper" id="mediaPlayingTimelineWrapper">
+									<div class="mediaPlayingTimeline" id="mediaPlayingTimeline">
+										
+									</div>
+								</div>
+								
+								<div class="mediaControlsWrapper">
+									<div class="mediaControlsContainer">
+										<img id="btnMediaShuffle" src="mediaimg/btnmediashuffle.png" />
+										<img id="btnMediaRepeat" src="mediaimg/btnmediarepeat.png" />
+										<div class="mediaControlVerticalSeparator"></div>
+										<img id="btnMediaBack" src="mediaimg/btnmediaback.png" />
+										<img id="btnMediaTogglePlay" src="mediaimg/btnmediaplay.png" />
+										<img id="btnMediaNext" src="mediaimg/btnmedianext.png" />
+										<div class="mediaControlVerticalSeparator"></div>
+										<img id="btnMediaStop" src="mediaimg/btnmediastop.png" />
+									</div>
+								</div>
+								
+								<span class="musicTime currentMusicTime">0:00</span>
+								<span class="musicTime totalMusicTime">0:00</span>
+								
+								<audio id="mainMusicPlayer" src="" preload="auto" type="audio/mpeg"></audio>
+							</div>				
+						</div>
+			
+						<div id="videoLibraryWrapper" class="mediaContentWrapper">
+				
+						</div>						
+					</div>				
+					
+					<div class="templateWrapper" style="display:none;" id="contactsWrapper">
+						<h2>[#contactmenu]</h2>
+						<h3>[#contactsub]</h3>
+						<div id="contactsContainer">
+							<ul id="contactList">
+								
+							</ul>
+						</div>
+						<div id="contactEditWrapper">
+							<h2></h2>
+							<h3></h3>
+							<img src="" />
+							
+							<fieldset>
+								<legend>[#ctnidentity]</legend>
+								<table>
+									<tr>
+										<td>[#ctnfullname]</td>
+										<td><input type="text" id="ctnFullname" /></td>
+									</tr>
+									<tr>
+										<td>[#ctnnumber] ([#ctnmobile])</td>
+										<td><input type="text" id="ctnPhonenumberMobile" /></td>
+									</tr>	
+									<tr>
+										<td>[#ctnnumber] ([#ctnhome])</td>
+										<td><input type="text" id="ctnPhonenumberHome" /></td>
+									</tr>	
+									<tr>
+										<td>[#ctnnumber] ([#ctnwork])</td>
+										<td><input type="text" id="ctnPhonenumberWork" /></td>
+									</tr>																																												
+								</table>
+							</fieldset>
+
+							<fieldset>
+								<legend>[#ctnemail]</legend>
+								<table>
+									<tr>
+										<td>[#ctnemail] ([#ctnhome])</td>
+										<td><input type="text" id="ctnEmailHome" /></td>
+									</tr>	
+									<tr>
+										<td>[#ctnemail] ([#ctnwork])
+										</td>
+										<td><input type="text" id="ctnEmailWork" /></td>
+									</tr>																										
+								</table>
+							</fieldset>
+							
+							<fieldset>
+								<legend>[#ctnlocation]</legend>
+								<table>
+									<tr>
+										<td>[#ctnaddress]</td>
+										<td><input type="text" id="ctnAddress" /></td>
+									</tr>
+									<tr>
+										<td>[#ctncity]</td>
+										<td><input type="text" id="ctnCity" /></td>
+									</tr>	
+									<tr>
+										<td>[#ctnregion]</td>
+										<td><input type="text" id="ctnRegion" /></td>
+									</tr>
+									<tr>
+										<td>[#ctncountry]</td>
+										<td><input type="text" id="ctnCountry" /></td>
+									</tr>
+									<tr>
+										<td>[#ctnpostal]</td>
+										<td><input type="text" id="ctnPostal" /></td>
+									</tr>									
+								</table>
+							</fieldset>		
+							
+							<div id="contactActionPane">
+								<button id="contactActionSave" style="background-image:url(mediaimg/32save.png)"></button>
+							</div>
+						</div>
+					</div>		
+		
+					<div class="templateWrapper" style="display:none;" id="messagesWrapper">
+						<!--h2>[#smsmenu]</h2>
+						<h3>[#smssub]</h3-->
+						<ul id="conversationsMenu">
+							<li id="sms_btn_delc"><img src="mediaimg/32trash.png" /><span>[#smsdelc]</span></li>
+							<li id="sms_btn_save"><img src="mediaimg/32save.png"  /><span>[#smssave]</span></li>
+							<li id="sms_btn_load"><img src="mediaimg/32load.png"  /><span>[#smsload]</span></li>
+							<li id="sms_btn_sync"><img src="mediaimg/32sync.png"  /><span>[#smssync]</span></li>
+						</ul>
+						
+						<form method="POST" action"SMS" id="uploadSmsForm" name="uploadSmsForm">
+							<input type="file" id="uploadSmsJson" name="uploadSmsJson"></input>
+						</form>
+						
+						<div id="conversationsWrapper">
+							<ul id="conversationsList" class="TH[@pref.theme]">
+							
+							</ul>
+							<div id="currentConversation" style="display:none;">
+								<ul id="currentMessagesList">
+									
+								</ul>
+								<div id="conversationActions">
+									<div id="smsTextAreaWrapper">
+										<textarea id="smsTextArea"></textarea>
+									</div>
+									<div id="btnSendSMS">[#send]</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="newSMSDialog" id="newSMSDialog">
+							<img src="mediaimg/close.png" id="closeNewSMS" />
+							<h3>[#newsmssub]</h3>
+							
+							<span class="title">[#phonenumber]</span>
+							<input id="newSMSNumber" type="text" />
+							
+							<span class="title">[#message]</span>
+							<textarea id="newSMSContent"></textarea>
+							
+							<div id="sendNewSMS">[#send]</div>
+						</div>
+					</div>		
+		
+					<div class="templateWrapper" style="display:none;" id="notesWrapper">
+						<h2>[#notesmenu]</h2>
+						<h3>[#notessub]</h3>
+						<div id="notesContentWrapper">
+							<ul id="notesList">
+								<li id="newDocumentButton"><img src="mediaimg/newdocument.png" />[#notesnew]</li>
+							</ul>
+						</div>
+						<div id="notesTitleInputContainer">
+							<h2>[#notestitleinput]</h2>
+							<input type="text" id="notesTitleInputText"></input>
+							<div>
+								<button>[#save]</button>
+							</div>
+						</div>
+					</div>				
+					
+					<div class="templateWrapper" style="display:none;" id="deviceWrapper">
+						<h2>[#devicemenu]</h2>
+						<h3>[#devicesub]</h3>
+						<div id="deviceInfoWrapper">
+							<ul id="InformationList">
+								<li>
+									<div id="deviceSmsDayCanvas"></div>
+								</li>		
+								<li>
+									<div id="deviceSmsContactCanvas"></div>
+								</li>	
+								<li>
+									<div id="pieChartCanvas"></div>
+								</li>	
+								<li>
+									<div id="sdUsageNoCanvas">
+										<h2>[#devicestorage]</h2>
+										<div class="noCanvasDeviceInfo">
+											<div class="storageBlockWrapper">
+												<span class="storageDescSpan">[#devicesd1]</span>
+												<div class="sd1 storageUsageWrapper">
+													<div class="sdperc"></div>
+													<div class="sdbar"></div>
+												</div>
+												<span class="storageDetailSpan storageDetailSpan1"></span>
+											</div>
+											
+											<div class="storageBlockWrapper">
+												<span class="storageDescSpan">[#devicesd2]</span>
+												<div class="sd2 storageUsageWrapper">
+													<div class="sdperc"></div>
+													<div class="sdbar"></div>
+												</div>
+												<span class="storageDetailSpan storageDetailSpan2"></span>
+											</div>
+										</div>
+									</div>
+								</li>						
+							</ul>
+						</div>
+					</div>	
+		
+					<div class="templateWrapper" style="display:none;" id="settingsWrapper">
+						<h2>[#settingsmenu]</h2>
+						<h3>[#settingssub]</h3>
+						<div id="customSettingsWrapper">
+							<ul id="settingsList">
+								<!--form id="backgroundUpload" action="UPLOAD" method="POST" enctype="multipart/form-data">
+									<input type="file" size="60" id="wallpaperFileInput" />
+									<h3 id="uploadProgress"></h3>
+								</form-->
+								
+								<li id="settingColor" style="background-image:url(mediaimg/colorfill.png)"></li>
+								<li id="settingAccounts" style="background-image:url(mediaimg/link.png)"></li>
+								<li id="settingTransform" style="background-image:url(mediaimg/transform.png)"></li>
+								<li id="settingAudio" style="background-image:url(mediaimg/speaker.png)"></li>
+								<li id="settingLanguage" style="background-image:url(mediaimg/flag.png)"></li>
+								<li id="settingSystem" style="background-image:url(mediaimg/system.png)"></li>
+							</ul>
+							
+							<div id="settingTabs">
+								<div id="settingColorTab" class="settingTab">
+									<h2>[#settingtitlecolor]</h2>
+									<fieldset>
+										<legend>[#smssub]</legend>
+										<label name="incomingColor" class="TzColorpicker">[#settinginsmscolor]</label>
+										<label name="outgoingColor" class="TzColorpicker">[#settingoutsmscolor]</label>
+									</fieldset>		
+									<fieldset>
+										<legend>[#wallpaper]</legend>
+										<ul id="settingWallpaperList">
+											<li id="wallpaperUploadButton"></li>
+										</ul>
+									</fieldset>					
+									<fieldset>
+										<legend>[#theme]</legend>
+										<span class="infoTag"><img src="mediaimg/dlginfo.png" />[#settingthemenotice]</span>
+										<ul id="themeList">
+											<li name="blurrysky" class="THblurrysky THblurryskyBorder"></li>
+											<li name="konga" class="THkonga THkongaBorder"></li>
+											<li name="royalred" class="THroyalred THroyalredBorder"></li>
+											<li name="candy" class="THcandy THcandyBorder"></li>
+											<li name="morning" class="THmorning THmorningBorder"></li>
+											<li name="forest" class="THforest THforestBorder"></li>
+										</ul>
+									</fieldset>
+								</div>						
+								
+								<div id="settingAccountsTab" class="settingTab">
+									<h2>ADD LABEL - Account linking</h2>
+									
+								</div>
+								
+								<div id="settingTransformTab" class="settingTab">
+									<h2>[#settingtitledim]</h2>
+								</div>					
+								
+								<div id="settingAudioTab" class="settingTab">
+									<h2>[#settingtitlesound]</h2>
+									<div id="settingRingtoneSound" name="notificationAudio" class="toggleButton">[#settingringtone]</div>
+									<div id="settingInterfaceSound" name="interfaceAudio" class="toggleButton">[#settinginterfacesnd]</div>
+									<div id="settingAddSound" name="addAudio" class="toggleButton">[#settingaddsnd]</div>
+									<div id="settingPopupSound" name="popupAudio" class="toggleButton">[#settingpopupsnd]</div>
+									
+									<fieldset>
+										<legend>[#settingphonenotif]</legend>
+										<ul id="settingDeviceRingtone">
+											<li name="0" style="background-image:url(mediaimg/silent.png)"></li>
+											<li name="1" style="background-image:url(mediaimg/vibrate.png)"></li>
+											<li name="2" style="background-image:url(mediaimg/ringtone.png)"></li>
+										</ul>
+									</fieldset>
+								</div>					
+								
+								<div id="settingLanguageTab" class="settingTab">
+									<h2>[#settingtitlelang]</h2>
+									<span class="infoTag"><img src="mediaimg/dlginfo.png" />[#settinglangnotice]</span>
+									
+									<ul id="settingLangList">
+										<li id="settingLangEn" name="en" style="background-image:url(mediaimg/flag-us.png)">English</li>
+										<li id="settingLangFr" name="fr" style="background-image:url(mediaimg/flag-ca.png)">Français</li>
+										<li id="settingLangSp" name="sp" style="background-image:url(mediaimg/flag-es.png)">Español</li>
+									</ul>
+								</div>					
+								
+								<div id="settingSystemTab" class="settingTab">
+									<h2>[#settingtitlesys]</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="mediaWaveContainer"></div>
+		
+		<div class="mainBackground">
+			<div class="mainBackgroundBlack">
+			</div>
+		</div>
+		
+		<div id="loadingWrapper">
+			<div class="loadingTextContainer">
+				<span>[#loading]</span>
+			</div>
+			
+			<div id="bowlG">
+				<div id="bowl_ringG">
+					<div class="ball_holderG">
+						<div class="ballG">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="loadingBlackOverlay"></div>
+		
+		<div id="colorPickerWrapper">
+			<img id="colorPickerCloseButton" src="mediaimg/close.png" />
+			<div id="colorPickerContainer">
+				[#settingcolordlg]
+				<p id="colorpickerHolder"></p>
+			</div>
+		</div>
+		
+		<div id="mainMenuWrapper">
+			<div id="mainMenuContainer">
+				<ul class="rightBar rightBarHidden" id="rightMainMenu">
+					<li id="liFiles">[#filemenu]		<img src="mediaimg/files.png" /></li>
+					<li id="liGallery">[#mediamenu]		<img src="mediaimg/multimedia.png" /></li>
+					<li id="liContacts">[#contactmenu]	<img src="mediaimg/contact.png" /></li>
+					<li id="liMessages">[#smsmenu]		<img src="mediaimg/mail.png" /></li>
+					<li id="liNotes">[#notesmenu]		<img src="mediaimg/document.png" /></li>
+					<li id="liDevice">[#devicemenu]		<img src="mediaimg/chart.png" /></li>
+					<li id="liSettings">[#settingsmenu]	<img src="mediaimg/system.png" /></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="notificationBar slidedClosed" id="notificationBar">
+			<img src="mediaimg/tzicon36.png" id="tzLogo" alt="Logo" />
+			<ul id="notificationPanel">
+				
+			</ul>
+			
+			<span id="batteryLevel">?? %</span>
+			<div id="batteryLogoWrapper">
+				<div id="batteryLogo"></div>
+			</div>
+		</div>		
+		
+		<div id="galleryViewerWrapper" class="TH[@pref.theme]">
+			<div id="galleryViewer">
+				<span id="galleryViewerLoading"></span>
+			</div>				
+								
+			<span id="galleryViewerTitle"></span>
+								
+			<img src="mediaimg/close.png" class="photoViewerCloseBtn" />
+			<img src="mediaimg/rotateright.png" class="photoViewerRotateBtn" />
+			<img src="mediaimg/rotateleft.png" class="photoViewerDerotateBtn" />	
+		</div>			
+		
+		<div id="globalUploader">
+			<div id="uploaderContainer" class="TH[@pref.theme] hidden">
+				<h2>[#upload]</h2>
+				<h3></h3>
+				<hr />
+				
+				<ul id="uploaderFileList">
+					
+				</ul>
+				<div id="uploadInputContainer">
+				
+				</div>
+				
+				<img src="mediaimg/x32.png" width="16px" id="uploadCloseBtn" />
+			</div>
+			
+			<iframe id="downloadManager"></iframe>
+		</div>		
+		<div id="uploadProgress" class="hidden">
+			[#upload] : <span>0%</span>
+			<div id="uploadProgressBar"></div>
+		</div>
+		
+		<div class="loginOverlay fullscreenTitle" id="loginOverlay">
+			<div class="h1Background">
+				<img src="mediaimg/h1title.png" />
+			</div>
+			
+			<div class="h1BackgroundGlowWrapper">
+				<div class="h1BackgroundGlow"></div>
+			</div>
+			
+			<div class="centeredMessageContainer" id="loginContainer">
+				<input type="password" id="loginPasswordInput" />
+			</div>
+		</div>
+		
+		<div class="fullscreenTitle topmost invisible" id="rebootOverlay">
+			<div class="h1Background">
+				<img src="mediaimg/h1title.png" />
+			</div>
+			
+			<div class="h1BackgroundGlowWrapper">
+				<div class="h1BackgroundGlow"></div>
+			</div>	
+			
+			<div class="rebootMessageContainer">
+				<h2>[#rebooting]</h2>
+			</div>	
+		</div>
+		
+		<div id="crashOverlay">
+			<div class="centerContainer">
+				<h2>[#crashtitle]</h2>
+				<img src="mediaimg/bigwarning.png" />
+				<h2>[#crashretry]</h2>
+			</div>
+		</div>
+		
+		<div id="loginLoading">
+			<div id="loginLoadingStepsContainer">
+				<h1>[#loading]</h1>
+				
+				<div class="loadingAnimationWrapper">
+					<div class="loadingAnimationContainer"></div>
+				</div>
+		
+				<ul>
+					<li id="loading0"><div class="colorNotif"></div>[#contactmenu]</li>
+					<li id="loading1"><div class="colorNotif"></div>[#mediamenu]</li>
+					<li id="loading2"><div class="colorNotif"></div>[#smsmenu]</li>
+					<li id="loading3"><div class="colorNotif"></div>[#notesmenu]</li>
+					<li id="loading4"><div class="colorNotif"></div>[#settingsmenu]</li>
+					<li id="loading5"><div class="colorNotif"></div>[#devicemenu]</li>
+				</ul>
+			</div>			
+		</div>
+		
+		<div class="TzWindowArea" id="TzWindowArea">
+			<div id="TzWindowsWrapper">
+				<div class="tzDraggable" id="mediaPreviewContainer">
+					<div class="TzHandle TH[@pref.theme]" id="mediaPreviewHandle">
+						<span id="TzMediaTitle"></span>
+						<img class="TzWindowButton TzWindowMinimize" id="mediaPreviewMinimize" src="mediaimg/arrow-down-2.png" />
+						<img class="TzWindowButton TzWindowClose" id="mediaPreviewClose" src="mediaimg/dialog-close.png" />
+					</div>
+					
+					<audio id="mediaPreviewPlayer" src="sounds/Notification.mp3" controls="controls" type="audio/mpeg"></audio>
+				</div>		
+				
+				<div class="tzDraggable" id="videoPreviewContainer">
+					<div class="TzHandle TH[@pref.theme]" id="videoPreviewHandle">
+						<span id="TzVideoTitle"></span>
+						<img class="TzWindowButton TzWindowMinimize" id="videoPreviewMinimize" src="mediaimg/arrow-down-2.png" />
+						<img class="TzWindowButton TzWindowClose" id="videoPreviewClose" src="mediaimg/dialog-close.png" />
+					</div>
+					
+					<video id="videoPreviewPlayer" src="" controls="controls"></video>
+				</div>	
+				
+				<div id="browserFileContextMenu" class="contextMenu" >
+					<div id="bfctDownload" class="contextMenuItem">[#ctxdownload]</div>
+					<div id="bfctView" class="contextMenuItem">[#ctxview]</div>
+					<div id="bfctPlaymedia" class="contextMenuItem">[#ctxplaymedia]</div>
+					<div id="bfctPlayvideo" class="contextMenuItem">[#ctxplayvideo]</div>
+					<hr />
+					<div id="bfctCopy" class="contextMenuItem">[#ctxcopy]</div>
+					<div id="bfctCut" class="contextMenuItem">[#ctxcut]</div>
+					<div id="bfctDelete" class="contextMenuItem">[#ctxdelete]</div>
+				</div>		
+			</div>
+		</div>		
+		
+		<ul class="notificationArea notifTopRight"></ul>
+		
+		<audio id="closurePlayer" preload="preload" type="audio/mpeg" src="sounds/Closure.mp3"></audio>
+		<audio id="cursorAudio" preload="preload" type="audio/mpeg" src="sounds/Cursor.mp3"></audio>
+		<audio id="notificationAudio" preload="preload" type="audio/mpeg" src="sounds/Notification.mp3"></audio>
+		<audio id="addAudio" preload="preload" type="audio/mpeg" src="sounds/Add.mp3"></audio>
+		<audio id="popupAudio" preload="preload" type="audio/mpeg" src="sounds/Popup.mp3"></audio>
+		<audio id="tickAudio" preload="preload" type="audio/mpeg" src="sounds/Tick.mp3"></audio>
+		
+		<span id="versionTag">STABLE RELEASE FOR TESTING PURPOSES ONLY - Tranzoid Desktop 0.7.12 ALPHA, Build 7812</span>		
+	</body>
+</html>

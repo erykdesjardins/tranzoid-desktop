@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tranzoid Desktop</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="listennlog">Listen and LOG</string>
+    <string name="app_id">1433797953541040</string>
+
+</resources>

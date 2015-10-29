@@ -1,0 +1,119 @@
+title|Tranzoid
+subtitle|Bureau
+rebooting|Redémarrage
+filemenu|Fichiers
+browseautherror|Vous n\'êtes pas autorisé à visionner le contenu de ce dossier
+root|racine
+says|dit
+all|Tous
+others|Autres
+mediamenu|Multimédia
+mediasub|Le contenu multimédia sur votre appareil
+musicartists|Artistes
+musicalbums|Albums
+musicsongs|Morceaux
+musicfolders|Dossiers
+nowplaying|Lecture en cours
+addtoplaylist|Ajouter à la liste de lecture
+emptyplaylist|Vider la liste
+gallerymenu|Photos
+gallerysub|Photos prises avec la caméra
+audiomenu|Musique
+audiosub|Morceaux musicaux
+videomenu|Vidéos
+videosub|Clips vidéos
+contactmenu|Contacts
+contactsub|Gestion des contacts
+smsmenu|Messages
+smssub|Vos conversations en messages texte
+smssave|Sauvegarder les conversations
+smsload|Charger un fichier historique
+smsdelc|Supprimer cette conversation
+smssync|Forcer la synchronisation
+smssyncing|Syncronization en cours
+smssyncdone|Syncronization teminée
+newsmssub|Nouveau message texte
+newsmsbtn|Nouveau SMS
+deletesmsconfirm|Voulez-vous supprimer ce message? Il sera impossible de le récupérer.
+deleteconvconfirm|Voulez-vous supprimer cette conversation? Il sera impossible de la récupérer.
+successsendsms|Message envoyé!
+phonenumber|Numéro de téléphone
+message|Message
+send|Envoyer
+devicemenu|Appareil
+devicesub|Informations à propos de votre téléphone ou tablette
+devicesmsday|Message / Jour
+devicesmscontact|Message / Contact
+deviceinfotitle|Informations sur l\'appareil
+devicestorage|Utilisation de la mémoire
+devicesd1|Mémoire du téléphone
+devicesd2|Mémoire de la carte SD
+devicegb|Go
+devicefreespace|Espace libre
+settingsmenu|Paramètres
+settingssub|Personnalisation du Bureau Tranzoid
+loading|Chargement
+currentfolder|Dossier courant
+ctxdownload|Télécharger
+ctxview|Visualiser
+ctxplaymedia|Jouer le media
+ctxplayvideo|Jouer la vidéo
+ctxcopy|Copier
+ctxcut|Couper
+ctxdelete|Supprimer
+ctxpaste|Coller
+auth|Authentification
+loginfailedmsg|Les informations fournies ne semblent pas valides. Veuillez entrer le bon mot de passe.
+loginfailedtitle|Impossible de se connecter
+loginsuccessmsg|Vous avez été authentifié avec succès
+welcomeback|Bienvenue à nouveau!
+contactloadfail|Impossible d\'accéder aux contacts de l\'appareil
+me|Moi-même
+clipboard|Presse-Papier
+clipboardcopy|Le fichier est maintenant dans le presse-papier
+clipboardmove|Le fichier a été bougé avec succès
+clipboardpaste|Le fichier a été copié avec succès
+clipboardfail|Impossible d\'effectuer l\'opération
+filedeleted|Le fichier a été supprimé de l\'appareil
+deleteconfirm|Voulez-vous vraiment supprimer ce fichier? Il sera impossible de le récupérer.
+battery|Batterie
+batterycharged|La batterie de l\'appareil est pleine.
+connectionlost|La connexion a été perdue
+crashtitle|Une erreur est survenue et la connexion avec l'appareil a été perdue
+crashretry|Tentative de récupération en cours...
+notesmenu|Documents
+notessub|Vos documents Tranzoid
+notesnew|Nouveau document
+notestitleinput|Veuillez entrer le nom du document
+notessavesuccess|Le document a été sauvegardé avec succès
+notessavefail|Impossible de sauvegarder le document
+save|Sauvegarder
+theme|Thème
+settingtitlecolor|Apparence
+settingtitledim|Dimensions & Positions
+settingtitlesound|Audio
+settingtitlelang|Langage
+settingtitlesys|Système
+settingringtone|Notifications audibles
+settinginterfacesnd|Sons de l'interface
+settingaddsnd|Son d'envoi d'un message
+settingpopupsnd|Sons informatifs
+settinglangnotice|Veuillez noter que le changement de langue nécessite un redémarrage de Tranzoid
+settingthemenotice|Veuillez noter que le changement de thème nécessite un redémarrage de Tranzoid
+settinginsmscolor|Couleur de fond des messages entrants
+settingoutsmscolor|Couleur de fond des messages sortants
+settingcolordlg|Choisissez une couleur puis appuyez sur le bouton "palette"
+settingphonenotif|Notifications de l'appareil
+ctnidentity|Identité
+ctnfullname|Nom complet
+ctnnumber|Numéro
+ctnmobile|Mobile
+ctnhome|Domicile
+ctnwork|Travail
+ctnemail|Courriel
+ctnlocation|Emplacement
+ctnaddress|Adresse
+ctncountry|Pays
+ctncity|Ville
+ctnregion|État/Province
+ctnpostal|Cose postal
